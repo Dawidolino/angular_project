@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,23 +9,22 @@ import { AboutUsComponent } from './about-us/about-us.component';
   imports: [
     HomeComponent,
     AboutUsComponent,
+    RouterModule,
   ],
-  template: `
-  <!-- komponent app  -->
+  template: ` 
   <main>
-    <header class="brand-name">
+  <header class="brand-name">
+   <a [routerLink]="['/']">  
       <img class="brand-logo" src="/assets/logo.svg">
+   </a>  
     </header>
   <section class="content">
-<!-- import komponentu home  -->
-  <app-home></app-home>
-  <!-- import aboutus -->
-  <!-- <app-about-us></app-about-us> -->
-
+    <router-outlet></router-outlet>
   </section>
   
   
   </main>`,
+
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
