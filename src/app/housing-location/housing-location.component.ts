@@ -13,7 +13,7 @@ import { Housinglocation } from '../housinglocation';
       <p class="listing-location">{{Housinglocation.city}}, {{Housinglocation.state}}</p>
     </section>
 
-  `,
+  `, 
   styleUrls: ['./housing-location.component.css']
 })
 export class HousingLocationComponent {
