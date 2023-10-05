@@ -14,10 +14,16 @@ import { Housinglocation } from '../housinglocation';
       alt="Exterior photo of {{housingLocation?.name}}"/>
     <section class="listing-description">
       <h2 class="listing-heading">{{housingLocation?.name}}</h2>
-      <p class="listing-location">{{housingLocation?.city}}, {{housingLocation?.state}}</p>
-      <p class="listing-wifi">{{housingLocation?.wifi}}</p>
-      <p class="listing-laundry">{{housingLocation?.laundry}}</p>
+      <p class="listing-location">{{housingLocation?.city}}, {{housingLocation?.state}}</p>      
     </section>    
+    <section class="listing-features">
+      <h2 class="section-heading">About this housing location</h2>
+      <ul>
+        <li>Units available: {{housingLocation?.availableUnit}}</li>
+        <li>Does this location have wifi: {{housingLocation?.wifi}}</li>
+        <li>Does this location have laundry: {{housingLocation?.laundry}}</li>
+      </ul>
+    </section>
   </a>
 `,
   styleUrls: ['./details.component.css']
