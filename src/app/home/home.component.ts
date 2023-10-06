@@ -34,9 +34,11 @@ HousinglocationList:Housinglocation[]=[]
 housingService: HousingService = inject(HousingService);
 filteredLocationList:Housinglocation[]=[]  
 
-constructor(){
-this.HousinglocationList=this.housingService.getAllHousingLocations();
-this.filteredLocationList=this.HousinglocationList;
+constructor() {
+  this.housingService.getAllHousingLocations().then((HousinglocationList: Housinglocation[]) => {
+    this.HousinglocationList = HousinglocationList;
+    this.filteredLocationList = HousinglocationList;
+  });
 }
 
 filterResults(text:string){
