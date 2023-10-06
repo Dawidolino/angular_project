@@ -68,4 +68,8 @@ getAllHousingLocations(): Housinglocation[] {
 getHousingLocationById(id: number): Housinglocation | undefined {
   return this.HousinglocationList.find(housingLocation => housingLocation.id === id);
 }
+submitApplication(firstName: string, lastName: string, email: string){
+  console.log(`firstName: ${firstName} lastName: ${lastName}, email: ${email}`)
+}
+
 }
